@@ -1,4 +1,6 @@
-/// Time Of Flight sensing organelle
+//! Time Of Flight sensing organelle
+
+use smart_leds::colors::*;
 
 /// The sensed range of the sensor, some of the values are only available for the VL53L1X, which
 /// senses max 4 meters. The sensor VL53L0X senses max 2 meters.
