@@ -1,7 +1,5 @@
 //! Time Of Flight sensing organelle
 
-use smart_leds::colors::*;
-
 /// The sensed range of the sensor, some of the values are only available for the VL53L1X, which
 /// senses max 4 meters. The sensor VL53L0X senses max 2 meters.
 #[derive(Debug, Copy, Clone, PartialEq)]
@@ -59,16 +57,18 @@ impl SensedRange {
         }
     }
 
-    pub fn into_color(&self) -> [smart_leds::RGB<u8>; 1] {
-        match self {
-            SensedRange::ExtremelyNear => [DARK_RED],
-            SensedRange::VeryNear => [ORANGE_RED],
-            SensedRange::Near => [DARK_ORCHID],
-            SensedRange::Far => [GOLD],
-            SensedRange::VeryFar => [GREEN],
-            SensedRange::ExtremelyFar => [LIGHT_GREEN],
-            SensedRange::None => [BLACK],
-            SensedRange::Off => [BLUE],
-        }
-    }
+    /* An example implementation that transforms the SensedRange into a color
+     * use smart_leds::colors::*;
+     * pub fn into_color(&self) -> [smart_leds::RGB<u8>; 1] {
+            match self {
+                SensedRange::ExtremelyNear => [DARK_RED],
+                SensedRange::VeryNear => [ORANGE_RED],
+                SensedRange::Near => [DARK_ORCHID],
+                SensedRange::Far => [GOLD],
+                SensedRange::VeryFar => [GREEN],
+                SensedRange::ExtremelyFar => [LIGHT_GREEN],
+                SensedRange::None => [BLACK],
+                SensedRange::Off => [BLUE],
+            }
+    } */
 }
