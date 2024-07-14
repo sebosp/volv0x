@@ -13,8 +13,8 @@ pub enum VolvoxMsg {
         /// The capabilities of the unit
         capabilities: u32,
     },
-    /// A request to get
-    Request{
+    /// A request to generate a reaction to an event
+    Request {
         /// The source of the request
         src: [u8; VOLVOX_ID_LEN],
         /// The destination of the request
