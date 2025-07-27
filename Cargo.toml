@@ -20,9 +20,7 @@ categories = [
 ]
 
 [dependencies]
-esp-hal-smartled.workspace = true
-smart-leds.workspace = true
-heapless.workspace = true
+heapless = "0.8.0"
 bitflags = "2.5.0"
 
 [dev-dependencies]
